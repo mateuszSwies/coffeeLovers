@@ -11,6 +11,7 @@
 $mainFont: "roboto", Arial, sans-serif;
 $mainColour: rgb(139, 46, 46);
 $secondColour: lightgrey;
+$thirdColour: #c3b091;
 
 // styles
 body {
@@ -43,6 +44,7 @@ body {
 	width: 100%;
 	transition: 0.5s;
 	z-index: 1;
+	font-family: "Dancing Script", cursive;
 	&__list {
 		display: flex;
 		flex-direction: column;
@@ -87,16 +89,133 @@ body {
 
 .about {
 	margin-top: 31vh;
-	height: 40vh;
-	background-color: white;
+	height: 30vh;
+	background-color: $thirdColour;
 	border-radius: 3%;
 	font-family: "Dancing Script", cursive;
 	&__quote {
 		text-align: center;
-		padding-top: 20%;
+		padding-top: 10%;
 	}
 	&__author {
 		text-align: right;
 		padding: 5% 5% 0 0;
+	}
+}
+
+.team {
+	background-color: $thirdColour;
+	margin-top: 1vh;
+	padding-top: 2vh;
+	&__header {
+		text-align: center;
+		font-size: 40px;
+		position: relative;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 7%;
+			background-color: $mainColour;
+			height: 3px;
+			width: 20%;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 7%;
+			background-color: $mainColour;
+			height: 3px;
+			width: 20%;
+		}
+	}
+	&__crew {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-top: 3vh;
+	}
+	&__description {
+		text-align: center;
+		font-size: 25px;
+		padding: 3vh 0;
+	}
+	&__crewImg,
+	&__coffeeImg {
+		border-radius: 3%;
+		width: 100%;
+		margin-bottom: 2vh;
+	}
+}
+
+.offer {
+	min-height: 50vh;
+	margin: 3vh 0;
+	background-color: $thirdColour;
+	&__header {
+		font-size: 40px;
+		text-align: center;
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 7%;
+			background-color: $mainColour;
+			height: 3px;
+			width: 20%;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 7%;
+			background-color: $mainColour;
+			height: 3px;
+			width: 20%;
+		}
+	}
+}
+
+.product {
+	min-height: 15vh;
+	border: $mainColour 2px solid;
+	border-radius: 15px;
+	margin: 2vh 5vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	&__beansIcon {
+		font-size: 25px;
+	}
+	&__name {
+		margin-top: 10px;
+		text-align: center;
+		font-size: 20px;
+		font-weight: bold;
+		text-transform: uppercase;
+		flex-basis: 100%;
+	}
+	&__description {
+		font-size: 20px;
+		padding: 10px 15px;
+		text-align: center;
+	}
+	&__wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		padding: 15px 0;
+	}
+	&__price {
+		font-size: 25px;
+		text-align: left;
+		font-weight: bold;
+		span {
+			font-size: 20px;
+		}
 	}
 }
