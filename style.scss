@@ -1,0 +1,83 @@
+// style reset
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	// color: white;
+}
+
+// variables
+
+$mainFont: "roboto", Arial, sans-serif;
+$mainColour: rgb(139, 46, 46);
+
+// styles
+body {
+	position: relative;
+	font-size: 35px;
+	font-family: $mainFont;
+}
+
+.wrapper {
+	width: 100vw;
+	height: 200vh;
+	margin: 0 auto;
+}
+
+.fa-bars {
+	position: fixed;
+	top: 1vh;
+	right: 1vh;
+	font-size: 25px;
+	z-index: 2;
+}
+
+.menu {
+	height: 100vh;
+	background-color: $mainColour;
+	position: fixed;
+	top: 0;
+	left: 100vh;
+	width: 100%;
+	transition: 0.5s;
+	z-index: 1;
+	&__list {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: stretch;
+		text-align: center;
+	}
+	&__item {
+		list-style: none;
+		flex-basis: 50px; /*zmienić na wartość % */
+		border-bottom: 2px solid black;
+		text-transform: uppercase;
+		&:nth-child(1) {
+			border-top: 2px solid black;
+		}
+		&:active {
+			background-color: white;
+		}
+	}
+}
+
+.active {
+	left: 0;
+}
+
+.tittle {
+	background-color: $mainColour;
+	height: 10vh;
+	&__logo {
+		display: block;
+		max-height: 10vh;
+	}
+	&__back {
+		background-image: url("../images/header/small.jpg");
+		background-position: center;
+		background-size: cover;
+		height: 30vh;
+		filter: grayscale(80%);
+	}
+}

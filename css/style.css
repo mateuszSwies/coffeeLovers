@@ -1,0 +1,89 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  font-size: 35px;
+  font-family: "roboto", Arial, sans-serif;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 200vh;
+  margin: 0 auto;
+}
+
+.fa-bars {
+  position: fixed;
+  top: 1vh;
+  right: 1vh;
+  font-size: 25px;
+  z-index: 2;
+}
+
+.menu {
+  height: 100vh;
+  background-color: rgb(139, 46, 46);
+  position: fixed;
+  top: 0;
+  left: 100vh;
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 1;
+}
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  text-align: center;
+}
+.menu__item {
+  list-style: none;
+  -ms-flex-preferred-size: 50px;
+      flex-basis: 50px; /*zmienić na wartość % */
+  border-bottom: 2px solid black;
+  text-transform: uppercase;
+}
+.menu__item:nth-child(1) {
+  border-top: 2px solid black;
+}
+.menu__item:active {
+  background-color: white;
+}
+
+.active {
+  left: 0;
+}
+
+.tittle {
+  background-color: rgb(139, 46, 46);
+  height: 10vh;
+}
+.tittle__logo {
+  display: block;
+  max-height: 10vh;
+}
+.tittle__back {
+  background-image: url("../images/header/small.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
+}/*# sourceMappingURL=style.css.map */
