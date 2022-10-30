@@ -18,13 +18,13 @@ body {
 	position: relative;
 	font-size: 35px;
 	font-family: $mainFont;
-	background-color: $thirdColour;
 }
 
 .wrapper {
 	width: 100vw;
 	height: 200vh;
 	margin: 0 auto;
+	background-color: $thirdColour;
 }
 
 .fa-bars {
@@ -371,6 +371,10 @@ textarea {
 //media-queries
 
 @media (min-width: 719px) {
+	.wrapper {
+		margin: 0 10vw;
+		max-width: 80vw;
+	}
 	.fa-bars {
 		display: none;
 	}
@@ -394,6 +398,9 @@ textarea {
 		top: 0;
 		left: 0;
 		display: none;
+		width: 80vw;
+		margin-left: 10vw;
+		margin-right: 10vw;
 		&__list {
 			background-color: $mainColour;
 			flex-direction: row;
