@@ -154,6 +154,7 @@ body {
 	min-height: 50vh;
 	margin: 3vh 0;
 	background-color: $thirdColour;
+	padding-bottom: 1vh;
 	&__header {
 		font-size: 40px;
 		text-align: center;
@@ -230,5 +231,131 @@ body {
 	&__orderBtn:active {
 		background-color: $mainColour;
 		color: $thirdColour;
+	}
+}
+
+.contact {
+	background-color: $thirdColour;
+	&__header {
+		text-align: center;
+		font-size: 40px;
+		font-weight: bold;
+		position: relative;
+		padding: 10px 0;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 7%;
+			background-color: $mainColour;
+			height: 3px;
+			width: 15%;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 7%;
+			background-color: $mainColour;
+			height: 3px;
+			width: 15%;
+		}
+	}
+	&__description {
+		text-align: center;
+		font-size: 15px;
+		font-weight: normal;
+		margin: 5px 15px;
+	}
+	&__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: stretch;
+		flex-grow: 0;
+		height: 30vh;
+		margin-bottom: 10vh;
+	}
+	&__map {
+		width: 80%;
+		margin: 5px auto 0;
+		padding-bottom: 25px;
+	}
+}
+.mobile,
+.mail,
+.address {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5% 0;
+	height: 100px;
+	&__icon {
+		width: 10%;
+	}
+	&__description {
+		padding-top: 10px;
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+	}
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 80%;
+	text-align: center;
+	margin: 0 auto 30px;
+	padding-bottom: 30px;
+	&__header {
+		font-size: 15px;
+		font-weight: normal;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	&__button {
+		height: 30px;
+		width: 80px;
+		font-family: $mainFont;
+		border: 3px solid $mainColour;
+	}
+}
+input {
+	height: 35px;
+}
+input,
+textarea {
+	width: 70%;
+	margin: 4px 0 8px;
+	border-top: transparent;
+	border-right: transparent;
+	border-left: $mainColour 3px solid;
+	border-bottom: $mainColour 3px solid;
+	font-family: $mainFont;
+	font-size: 15px;
+}
+.map {
+	display: flex;
+	flex-direction: column;
+	&__header {
+		font-size: 30px;
+		font-weight: normal;
+		text-align: center;
+	}
+}
+
+.footer {
+	height: 25px;
+	background-color: $mainColour;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 15px;
+	width: 100%;
+	&__author {
+		text-decoration: underline;
+		color: black;
 	}
 }
