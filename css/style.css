@@ -10,6 +10,7 @@ body {
   position: relative;
   font-size: 35px;
   font-family: "roboto", Arial, sans-serif;
+  background-color: lightgrey;
 }
 
 .wrapper {
@@ -86,4 +87,21 @@ body {
   height: 30vh;
   -webkit-filter: grayscale(80%);
           filter: grayscale(80%);
+  border-radius: 0 0 3% 3%;
+}
+
+.about {
+  margin-top: 31vh;
+  height: 40vh;
+  background-color: white;
+  border-radius: 3%;
+  font-family: "Dancing Script", cursive;
+}
+.about__quote {
+  text-align: center;
+  padding-top: 20%;
+}
+.about__author {
+  text-align: right;
+  padding: 5% 5% 0 0;
 }/*# sourceMappingURL=style.css.map */

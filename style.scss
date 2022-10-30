@@ -10,12 +10,14 @@
 
 $mainFont: "roboto", Arial, sans-serif;
 $mainColour: rgb(139, 46, 46);
+$secondColour: lightgrey;
 
 // styles
 body {
 	position: relative;
 	font-size: 35px;
 	font-family: $mainFont;
+	background-color: $secondColour;
 }
 
 .wrapper {
@@ -79,5 +81,22 @@ body {
 		background-size: cover;
 		height: 30vh;
 		filter: grayscale(80%);
+		border-radius: 0 0 3% 3%;
+	}
+}
+
+.about {
+	margin-top: 31vh;
+	height: 40vh;
+	background-color: white;
+	border-radius: 3%;
+	font-family: "Dancing Script", cursive;
+	&__quote {
+		text-align: center;
+		padding-top: 20%;
+	}
+	&__author {
+		text-align: right;
+		padding: 5% 5% 0 0;
 	}
 }
