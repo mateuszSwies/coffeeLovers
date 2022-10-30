@@ -188,8 +188,9 @@ body {
 	flex-direction: row;
 	justify-content: center;
 	flex-wrap: wrap;
-	&__beansIcon {
-		font-size: 25px;
+	&__icon {
+		width: 30%;
+		margin-top: 3%;
 	}
 	&__name {
 		margin-top: 10px;
@@ -217,5 +218,17 @@ body {
 		span {
 			font-size: 20px;
 		}
+	}
+	&__orderBtn {
+		border: 2px solid $mainColour;
+		border-radius: 15px;
+		width: 85px;
+		background-color: $thirdColour;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	&__orderBtn:active {
+		background-color: $mainColour;
+		color: $thirdColour;
 	}
 }
