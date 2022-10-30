@@ -66,7 +66,7 @@ body {
   border-top: 2px solid black;
 }
 .menu__item:active {
-  background-color: white;
+  background-color: #c3b091;
 }
 
 .active {
@@ -375,6 +375,11 @@ body {
   width: 80px;
   font-family: "roboto", Arial, sans-serif;
   border: 3px solid rgb(139, 46, 46);
+  border-radius: 10px;
+  background-color: #c3b091;
+}
+.form__button:active {
+  background-color: rgb(139, 46, 46);
 }
 
 input {
