@@ -407,6 +407,9 @@ textarea {
   font-weight: normal;
   text-align: center;
 }
+.map__frame {
+  height: 300px;
+}
 
 .footer {
   height: 25px;
