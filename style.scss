@@ -18,6 +18,9 @@ body {
 	position: relative;
 	font-size: 35px;
 	font-family: $mainFont;
+	& button {
+		cursor: pointer;
+	}
 }
 
 .wrapper {
@@ -404,6 +407,7 @@ textarea {
 		&__list {
 			background-color: $mainColour;
 			flex-direction: row;
+			cursor: pointer;
 		}
 		&__item {
 			border-bottom: 2px solid black;

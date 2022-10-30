@@ -11,6 +11,9 @@ body {
   font-size: 35px;
   font-family: "roboto", Arial, sans-serif;
 }
+body button {
+  cursor: pointer;
+}
 
 .wrapper {
   width: 100vw;
@@ -478,6 +481,7 @@ textarea {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    cursor: pointer;
   }
   .menu__item {
     border-bottom: 2px solid black;
