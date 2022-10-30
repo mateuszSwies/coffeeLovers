@@ -40,13 +40,14 @@ body {
 	background-color: $mainColour;
 	position: fixed;
 	top: 0;
-	left: 100vh;
+	left: 100vw;
 	width: 100%;
 	transition: 0.5s;
 	z-index: 1;
 	font-family: "Dancing Script", cursive;
 	&__list {
 		display: flex;
+		background-color: $mainColour;
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: stretch;
@@ -55,6 +56,7 @@ body {
 	&__item {
 		list-style: none;
 		flex-basis: 50px; /*zmienić na wartość % */
+		border-bottom: 2px solid black;
 		border-bottom: 2px solid black;
 		text-transform: uppercase;
 		&:nth-child(1) {
@@ -72,7 +74,6 @@ body {
 
 .tittle {
 	background-color: $mainColour;
-	height: 10vh;
 	&__logo {
 		display: block;
 		max-height: 10vh;
@@ -88,7 +89,6 @@ body {
 }
 
 .about {
-	margin-top: 31vh;
 	height: 30vh;
 	background-color: $thirdColour;
 	border-radius: 3%;
@@ -365,5 +365,128 @@ textarea {
 	&__author {
 		text-decoration: underline;
 		color: black;
+	}
+}
+
+//media-queries
+
+@media (min-width: 719px) {
+	.fa-bars {
+		display: none;
+	}
+	.contact__description {
+		font-size: 25px;
+		padding-top: 20px;
+	}
+	.contact__info {
+		flex-direction: row;
+		align-items: center;
+		height: 150px;
+		& div img {
+			width: 20%;
+		}
+	}
+	.mail__icon {
+		margin-bottom: 20px;
+	}
+	.menu {
+		height: 100px;
+		top: 0;
+		left: 0;
+		display: none;
+		&__list {
+			background-color: $mainColour;
+			flex-direction: row;
+		}
+		&__item {
+			border-bottom: 2px solid black;
+			border-top: 2px solid black;
+			border-right: 2px solid black;
+			flex-basis: 25%;
+			line-height: 100px;
+		}
+	}
+	.activeMenu {
+		display: block;
+		bottom: 25px;
+		top: auto;
+	}
+	.tittle {
+		&__logo {
+			max-height: none;
+			height: 200px;
+			margin: 0 auto;
+		}
+		&__back {
+			height: 55vh;
+		}
+	}
+	.team {
+		&__crew {
+			flex-direction: row;
+			flex-basis: 50%;
+			margin-bottom: 35px;
+		}
+		&__crewImg,
+		&__coffeeImg {
+			width: 50%;
+			padding: 0 25px;
+		}
+		&__description {
+			width: 50%;
+		}
+		&__coffee {
+			display: flex;
+			flex-direction: row-reverse;
+			flex-basis: 50%;
+		}
+	}
+	.offer {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		&__header {
+			width: 100%;
+		}
+	}
+	.product {
+		flex-basis: 30%;
+		margin: 0 10px;
+	}
+	.map {
+		margin-bottom: 200px;
+		&__frame {
+			height: 500px;
+		}
+	}
+}
+
+@media (min-width: 1023px) {
+	body {
+		max-width: 1200px;
+	}
+	.team {
+		&__crew,
+		&__coffee {
+			align-items: center;
+		}
+		&__description {
+			padding: 0 45px;
+		}
+		& img {
+			padding: 0 45px;
+		}
+	}
+	.contact {
+		&__info {
+			flex-direction: row;
+			flex-basis: 30%;
+			width: 90%;
+		}
+	}
+	.form {
+		&__header {
+			padding-right: 15px;
+		}
 	}
 }

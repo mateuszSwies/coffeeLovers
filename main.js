@@ -59,3 +59,13 @@ aboutUsBtn.addEventListener("click", goToAbout);
 productsListBtn.addEventListener("click", goToOffer);
 contactInfoBtn.addEventListener("click", goToContact);
 sendMsgBtn.addEventListener("click", clearArea);
+document.addEventListener("scroll", () => {
+	const height = window.scrollY;
+	const width = innerWidth;
+	if (height < 19) {
+		menu.classList.remove("activeMenu");
+	}
+	if (height > 20 && width > 719) {
+		menu.classList.add("activeMenu");
+	}
+});
