@@ -17,7 +17,7 @@ body button {
 
 .wrapper {
   width: 100vw;
-  height: 200vh;
+  min-height: 200vh;
   margin: 0 auto;
   background-color: #c3b091;
 }
